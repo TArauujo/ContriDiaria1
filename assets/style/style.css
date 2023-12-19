@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(120deg, #ffe53db8, #ff2525da);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.relogio{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
+}
+
+.relogio div{
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column; /* Colocou as palavras (Horas, Minutos e Segundos) em baixo dos números (20:09:40)*/
+    align-items: center; /* Centralizou dentro da borda preta*/
+    justify-content: center; /* E esse centralizou bem no centro mesmo da borda preta*/
+    color: white;
+    background-color: black;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+    border-radius: 3px;
+    letter-spacing: 3px;
+}
+
+.relogio span{
+    font-weight: bolder; /* "Peso" da fonte, deixa a letra, nesse caso, dos números, mais "Gorda"*/
+    font-size: 60px; /* Esse sim aumenta o tamanho da letra, nesse caso, dos números*/
+}
+
+.relogio span.tempo{
+    font-size: 10px; /* Aqui sim aumenta o tamanho das letras*/
+}
