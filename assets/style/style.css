@@ -23,7 +23,7 @@ body{
 }
 
 .relogio div{
-    height: 170px;
+    height: 180px;
     width: 150px;
     display: flex;
     flex-direction: column; /* Colocou as palavras (Horas, Minutos e Segundos) em baixo dos números (20:09:40)*/
