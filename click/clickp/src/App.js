@@ -25,6 +25,8 @@ function App() {
   return (
     <div id= 'page' onClick = {handleClick}>
       <h1>Ponto onde se clica ai fica uma bolinha onde clicou entendeu?</h1>
+      <button onClick>Desfazer</button>
+      <button onClick>Refazer</button>
       {list.map((item, index) => (
         <span 
           key={index}

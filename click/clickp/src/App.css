@@ -9,6 +9,10 @@
   left: 0;
 }
 
+h1{
+  text-align: center;
+}
+
 .dot{
   display: block;
   height: 10px;
