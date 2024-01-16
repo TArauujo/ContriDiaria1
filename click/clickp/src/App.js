@@ -19,13 +19,22 @@ function App() {
     setUndid([]);
   }
 
+  const handleUndo = (event) => {
+    event.stopPropagation();
+    const ladtItem = list[list.length - 1];
+    setUndid((prev) => {
+      const newArr = [...prev].slice(0, -1);
+      return newArr;
+    });
+  }
+
  
 
 
   return (
     <div id= 'page' onClick = {handleClick}>
       <h1>Ponto onde se clica ai fica uma bolinha onde clicou entendeu?</h1>
-      <button onClick>Desfazer</button>
+      <button onClick={handleUndo}>Desfazer</button>
       <button onClick>Refazer</button>
       {list.map((item, index) => (
         <span 
