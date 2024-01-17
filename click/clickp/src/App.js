@@ -28,6 +28,19 @@ function App() {
     });
   }
 
+  const handleRedo = (event) => {
+    const recoveredDot = undid[undid.length - 1];
+
+    event.stopPropagation();
+    
+    setUndid((prev) => {
+      const newArr = [...prev].slice(0, -1);
+      return newArr;
+
+    });
+
+    setList((prev) => [...prev, recoveredDot]);
+  };
  
 
 
@@ -35,7 +48,7 @@ function App() {
     <div id= 'page' onClick = {handleClick}>
       <h1>Ponto onde se clica ai fica uma bolinha onde clicou entendeu?</h1>
       <button onClick={handleUndo}>Desfazer</button>
-      <button onClick>Refazer</button>
+      <button onClick = {handleRedo}>Refazer</button>
       {list.map((item, index) => (
         <span 
           key={index}
