@@ -39,6 +39,10 @@ function App() {
     const recoveredDot = undid[undid.length - 1];
 
     event.stopPropagation();
+
+    if(undid.length === 0 ){
+      return;
+    }
     
     setUndid((prev) => {
       const newArr = [...prev].slice(0, -1);
