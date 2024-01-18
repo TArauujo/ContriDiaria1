@@ -21,8 +21,15 @@ function App() {
 
   const handleUndo = (event) => {
     event.stopPropagation();
-    const ladtItem = list[list.length - 1];
-    setUndid((prev) => {
+
+    if(list.length === 0 ){
+      return;
+    }
+
+    const lastItem = list[list.length - 1];
+    setUndid((prev) => [...prev, lastItem]);
+
+    setList((prev) => {
       const newArr = [...prev].slice(0, -1);
       return newArr;
     });
