@@ -18,21 +18,24 @@ fs.writeFile(path.join(__dirname, '/test', 'test.txt'), 'Hello, Node!!', (error)
         return console.log("Erro: ",error)
     }
     console.log("Arquivo criados com sucesso!!")
-})
-
-// Adicionar à um arquivo
-
-fs.appendFile(path.join(__dirname, '/test', 'test.txt'), 'Hello, Node!!', (error) =>{
-    if(error){
-        return console.log("Erro: ",error)
+    // Adicionar à um arquivo
+    fs.appendFile(path.join(__dirname, '/test', 'test.txt'), 'Hello, Node!!', (error) =>{
+        if(error){
+            return console.log("Erro: ",error)
+        }
+        console.log("Arquivo modificado com sucesso!!");
     }
-    console.log("Arquivo modificado com sucesso!!");
-});
+    )
+    // Ler arquivo
+    fs.readFile(path.join(__dirname, '/test', 'test.txt'), "utf-8", (error, data) => {
+        if(error){
+            return console.log("Erro: ",error)
+        }
+        console.log(data);
+    })
 
-// Leitura de arquivo
-fs.readFile(path.join(__dirname, '/test', 'test.txt'), "utf-8", (error, data) => {
-    if(error){
-        return console.log("Erro: ",error)
     }
-    console.log(data);
-});
+);
+
+
+
