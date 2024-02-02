@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectToDatabase = async () => {
     await mongoose.connect(
-        "mongodb+srv://admin:<password>@cluster0.syfehj8.mongodb.net/?retryWrites=true&w=majority", (error) => {
+        `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0.syfehj8.mongodb.net/?retryWrites=true&w=majority`, (error) => {
     (error) => {
         if(error){
             return console.log("Ocorreu um erro ao conectar com o banco de dados: ", error)
